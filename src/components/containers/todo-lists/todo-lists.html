@@ -1,0 +1,14 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>todo lists</h1>
+    <list-form on-submit="$ctrl.addList($event)"></list-form>
+  </header>
+  <div class="todo-list" ng-repeat="list in $ctrl.todoLists">
+    <list-item
+      index="$index"
+      name="list.name"
+      on-delete="$ctrl.deleteList($event)"
+      on-update="$ctrl.updateList($event)">
+    </list-item>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<footer class="footer">
+  <span class="todo-count"><strong>{{$ctrl.itemsLeft}}</strong> items left</span>
+  <ul class="filters">
+    <li>
+      <a href ui-sref="todo.all({id: $ctrl.listId})" ui-sref-active="selected">All</a>
+    </li>
+    <li>
+      <a href ui-sref="todo.active({id: $ctrl.listId})" ui-sref-active="selected">Active</a>
+    </li>
+    <li>
+      <a href ui-sref="todo.completed({id: $ctrl.listId})" ui-sref-active="selected">Completed</a>
+    </li>
+  </ul>
+  <button class="clear-completed" ng-click="$ctrl.clearCompleted()">Clear completed</button>
+</footer>
